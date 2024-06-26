@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+import "buf/validate/validate.proto";
+
+option java_multiple_files = true;
+option java_package = "com.store.order.proto";
+option java_outer_classname = "OrderProto";
+
+service OrderService {
+  rpc SearchOrders(OrderSearchRequest) returns (OrderListResponse);
+  rpc GetOrder(OrderId) returns (Order);
+  rpc AddOrder(NewOrder) returns (OrderId);
+  rpc UpdateOrder(Order) returns (OrderResponse);
+  rpc DeleteOrder(OrderId) returns (OrderResponse);
+
+}
+
+enum OrderStatus {
+  NULL_ORD_STATUS = 0;
+  FULFILLED = 1;
+  PENDING = 2;
+  CANCELLED = 3;
+}
+
+message Order {
+  int32 id = 1 [(buf.validate.field).required = true];
+  int32 productid = 2 [(buf.validate.field).required = true];
+  int32 count = 3 [(buf.validate.field).required = true];
+  OrderStatus status = 4 [(buf.validate.field).required = true];
+}
+
+message NewOrder {
+  int32 productid = 1 [(buf.validate.field).required = true];
+  int32 count = 2 [(buf.validate.field).required = true];
+}
+
+message OrderId {
+  int32 id = 1 [(buf.validate.field).required = true];
+}
+
+message OrderSearchRequest {
+  optional int32 productId = 1;
+  optional OrderStatus status = 2;
+}
+
+message OrderListResponse {
+  repeated Order orders = 1;
+}
+
+message OrderResponse {
+  string message = 1;
+}

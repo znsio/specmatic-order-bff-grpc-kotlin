@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "buf/validate/validate.proto";
+import "order.proto";
+import "product.proto";
+
+option java_multiple_files = true;
+option java_package = "com.store.bff.proto";
+option java_outer_classname = "BffProto";
+
+service OrderBffService {
+  rpc findAvailableProducts(findAvailableProductsRequest) returns (ProductListResponse);
+  rpc createOrder(NewOrder) returns (OrderId);
+  rpc createProduct(NewProduct) returns (ProductId);
+}
+
+message findAvailableProductsRequest {
+  ProductType type = 1 [(buf.validate.field).enum.defined_only = true];
+  int32  pageSize = 2 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1];
+}
+
