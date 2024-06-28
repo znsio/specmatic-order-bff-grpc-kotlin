@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: specmatic-order-bff-grpc
 grpc:
   client:
     order-service:

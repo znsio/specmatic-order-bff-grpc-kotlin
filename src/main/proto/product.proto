@@ -4,7 +4,7 @@ option java_multiple_files = true;
 option java_package = "com.store.product.proto";
 option java_outer_classname = "ProductProto";
 
-package product_package;
+package com.store;
 
 service ProductService {
   rpc SearchProducts(ProductSearchRequest) returns (ProductListResponse);

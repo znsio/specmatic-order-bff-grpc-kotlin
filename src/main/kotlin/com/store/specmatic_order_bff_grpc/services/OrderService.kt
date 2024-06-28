@@ -23,7 +23,7 @@ class OrderService {
 
     fun createOrder(newOrder: NewOrder): OrderId {
         val orderId = orderServiceGrpc.addOrder(
-            ServiceNewOrder.newBuilder().setProductid(newOrder.productid).setCount(newOrder.count).setStatus(
+            ServiceNewOrder.newBuilder().setProductId(newOrder.productId).setCount(newOrder.count).setStatus(
                 ServiceOrderStatus.PENDING
             ).build()
         )

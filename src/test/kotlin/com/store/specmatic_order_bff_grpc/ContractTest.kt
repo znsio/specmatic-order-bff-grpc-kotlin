@@ -4,7 +4,6 @@ import `in`.specmatic.grpc.junit.SpecmaticGrpcContractTest
 import `in`.specmatic.grpc.stub.GrpcStub
 import `in`.specmatic.grpc.utils.HOST
 import `in`.specmatic.grpc.utils.PORT
-import `in`.specmatic.grpc.utils.STUB_PORT
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
 import org.springframework.boot.test.context.SpringBootTest

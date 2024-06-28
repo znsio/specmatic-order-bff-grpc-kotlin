@@ -4,7 +4,7 @@ option java_multiple_files = true;
 option java_package = "com.store.bff.proto";
 option java_outer_classname = "BffProto";
 
-package bff_package;
+package com.store.bff;
 
 service OrderBffService {
   rpc findAvailableProducts(findAvailableProductsRequest) returns (ProductListResponse);
@@ -37,7 +37,7 @@ message ProductListResponse {
 }
 
 message NewOrder {
-  int32 productid = 1;
+  int32 productId = 1;
   int32 count = 2;
 }
 

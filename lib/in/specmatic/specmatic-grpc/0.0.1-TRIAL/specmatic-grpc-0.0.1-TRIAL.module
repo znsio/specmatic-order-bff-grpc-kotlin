@@ -1,0 +1,199 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "in.specmatic",
+    "module": "specmatic-grpc",
+    "version": "0.0.1-TRIAL",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "specmatic-grpc-0.0.1-TRIAL.jar",
+          "url": "specmatic-grpc-0.0.1-TRIAL.jar",
+          "size": 99702,
+          "sha512": "f1987777ee2637ab9f9aaa8e6b3cd7e85912ad63f31ac99d69c0d174051fe9d6e72b600d330b64149c58b819e22ddf308daadaa3ce3666f0007870db6567f671",
+          "sha256": "2cae60217fd145daeed1bae1739edd900c3a071b3f234720cee0592820513e1d",
+          "sha1": "5e885efaeee9448c64794f868549a26020cb9f5c",
+          "md5": "2700f8b12f3e3cbce67aab302fd502a9"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "in.specmatic",
+          "module": "junit5-support",
+          "version": {
+            "requires": "1.3.29"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "5.10.2"
+          }
+        },
+        {
+          "group": "org.assertj",
+          "module": "assertj-core",
+          "version": {
+            "requires": "3.25.3"
+          }
+        },
+        {
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-databind",
+          "version": {
+            "requires": "2.12.5"
+          }
+        },
+        {
+          "group": "com.fasterxml.jackson.module",
+          "module": "jackson-module-kotlin",
+          "version": {
+            "requires": "2.12.5"
+          }
+        },
+        {
+          "group": "com.squareup.wire",
+          "module": "wire-schema",
+          "version": {
+            "requires": "4.9.9"
+          }
+        },
+        {
+          "group": "com.github.os72",
+          "module": "protoc-jar",
+          "version": {
+            "requires": "3.11.4"
+          }
+        },
+        {
+          "group": "io.grpc",
+          "module": "grpc-bom",
+          "version": {
+            "requires": "1.63.0"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        },
+        {
+          "group": "io.grpc",
+          "module": "grpc-netty-shaded"
+        },
+        {
+          "group": "io.grpc",
+          "module": "grpc-protobuf"
+        },
+        {
+          "group": "io.grpc",
+          "module": "grpc-stub"
+        },
+        {
+          "group": "io.grpc",
+          "module": "grpc-services"
+        },
+        {
+          "group": "com.google.protobuf",
+          "module": "protobuf-java",
+          "version": {
+            "requires": "3.25.3"
+          }
+        },
+        {
+          "group": "com.google.protobuf",
+          "module": "protobuf-java-util",
+          "version": {
+            "requires": "3.25.3"
+          }
+        },
+        {
+          "group": "info.picocli",
+          "module": "picocli",
+          "version": {
+            "requires": "4.7.6"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "specmatic-grpc-0.0.1-TRIAL.jar",
+          "url": "specmatic-grpc-0.0.1-TRIAL.jar",
+          "size": 99702,
+          "sha512": "f1987777ee2637ab9f9aaa8e6b3cd7e85912ad63f31ac99d69c0d174051fe9d6e72b600d330b64149c58b819e22ddf308daadaa3ce3666f0007870db6567f671",
+          "sha256": "2cae60217fd145daeed1bae1739edd900c3a071b3f234720cee0592820513e1d",
+          "sha1": "5e885efaeee9448c64794f868549a26020cb9f5c",
+          "md5": "2700f8b12f3e3cbce67aab302fd502a9"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "specmatic-grpc-0.0.1-TRIAL-all.jar",
+          "url": "specmatic-grpc-0.0.1-TRIAL-all.jar",
+          "size": 77309676,
+          "sha512": "1f86af1e768dd8f6cb75164b0c71af017ba9fa4fecbaec893e195a65b6274d6d51578c5bd1b323d92caa265a51b7ec586c593385a46376c38183f4c30611bc8a",
+          "sha256": "0d8fa2edfd94c973ee888a5f8fe97a348f0236f91cda7a3559707ba66fac80f0",
+          "sha1": "8c810ba51542685bc3790fcc0b7d53fccd2ce344",
+          "md5": "b7e80d5945e17b5844301a310d0b68af"
+        }
+      ]
+    }
+  ]
+}
