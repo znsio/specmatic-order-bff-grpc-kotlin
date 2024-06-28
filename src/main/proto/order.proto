@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-import "buf/validate/validate.proto";
-
 option java_multiple_files = true;
 option java_package = "com.store.order.proto";
 option java_outer_classname = "OrderProto";
+
+package order_package;
 
 service OrderService {
   rpc SearchOrders(OrderSearchRequest) returns (OrderListResponse);
@@ -12,7 +12,6 @@ service OrderService {
   rpc AddOrder(NewOrder) returns (OrderId);
   rpc UpdateOrder(Order) returns (OrderResponse);
   rpc DeleteOrder(OrderId) returns (OrderResponse);
-
 }
 
 enum OrderStatus {
@@ -23,24 +22,25 @@ enum OrderStatus {
 }
 
 message Order {
-  int32 id = 1 [(buf.validate.field).required = true];
-  int32 productid = 2 [(buf.validate.field).required = true];
-  int32 count = 3 [(buf.validate.field).required = true];
-  OrderStatus status = 4 [(buf.validate.field).required = true];
+  int32 id = 1;
+  int32 productid = 2;
+  int32 count = 3;
+  OrderStatus status = 4;
 }
 
 message NewOrder {
-  int32 productid = 1 [(buf.validate.field).required = true];
-  int32 count = 2 [(buf.validate.field).required = true];
+  int32 productid = 1;
+  int32 count = 2;
+  OrderStatus status = 3;
 }
 
 message OrderId {
-  int32 id = 1 [(buf.validate.field).required = true];
+  int32 id = 1;
 }
 
 message OrderSearchRequest {
-  optional int32 productId = 1;
-  optional OrderStatus status = 2;
+  int32 productId = 1;
+  OrderStatus status = 2;
 }
 
 message OrderListResponse {

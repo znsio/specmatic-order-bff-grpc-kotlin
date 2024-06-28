@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-import "buf/validate/validate.proto";
-
 option java_multiple_files = true;
 option java_package = "com.store.product.proto";
 option java_outer_classname = "ProductProto";
+
+package product_package;
 
 service ProductService {
   rpc SearchProducts(ProductSearchRequest) returns (ProductListResponse);
@@ -23,24 +23,24 @@ enum ProductType {
 }
 
 message Product {
-  int32 id = 1 [(buf.validate.field).required = true];
-  string name = 2 [(buf.validate.field).required = true];
-  ProductType type = 3 [(buf.validate.field).required = true];
-  int32 inventory = 4 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1, (buf.validate.field).int32.lte = 101];
+  int32 id = 1;
+  string name = 2;
+  ProductType type = 3;
+  int32 inventory = 4;
 }
 
 message NewProduct {
-  string name = 1 [(buf.validate.field).required = true];
-  ProductType type = 2 [(buf.validate.field).required = true];
-  int32 inventory = 3 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1, (buf.validate.field).int32.lte = 101];
+  string name = 1;
+  ProductType type = 2;
+  int32 inventory = 3;
 }
 
 message ProductId {
-  int32 id = 1 [(buf.validate.field).required = true];
+  int32 id = 1;
 }
 
 message ProductSearchRequest {
-  optional ProductType type = 1;
+  ProductType type = 1;
 }
 
 message ProductListResponse {
