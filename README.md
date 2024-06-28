@@ -1,37 +1,36 @@
 # Specmatic Order BFF gRPC Sample
 
-**specmatic-order-bff-grpc** is a gRPC server application built according to the Specmatic Order BFF specifications.<br />
-The gRPC specifications are based on
-the [order-bff](https://github.com/znsio/specmatic-order-contracts/blob/main/in/specmatic/examples/store/product-search-bff-api_v4.yaml)
-OpenAPI specification.<br />
+This sample project demonstrates [Specmatic](https://specmatic.in/) **gRPC support** which allows you to use your **proto files for Contract Testing**.
+[Specmatic](https://specmatic.in/) **gRPC support** can also help you use your proto files for service mocking, #nocode backward compatibility testing and more.
+
+
+The **specmatic-order-bff-grpc-kotlin** is a gRPC server application built as per below proto files.
+* `src/main/proto/bff.proto`
+* `src/main/proto/order.proto`
+* `src/main/proto/product.proto`
+
+
+NOTE: In a real-world scenario, these proto files would be on a Central Contract Repo so that we have single source of truth for all stakeholders. We have the files locally here for demo purposes.
+
+The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-order-bff-grpc-kotlin** gRPC server app using the above proto files.
 
 ## Requirements
+
 - Java 17 or later
-- Specmatic order gRPC Server
 
 ## Project Setup
 
-```Start the gRPC Server before starting the client.```
-
 1. Fork or clone the repository
-2. Generate Proto files and Install to Local Repository
-    - ```bash
-      mvn clean install -f proto/pom.xml
-      ```
-3. Build the Spring Server
-    - ```bash
-      mvn clean package
-      ```
-4. Run the server
-    - ```bash
-      java -jar target/specmatic-order-grpc-0.0.1-SNAPSHOT.jar
-      ```
-      or
-    - ```bash
-      mvn spring-boot:run
-      ```
+   ```shell
+   git clone https://github.com/znsio/specmatic-order-bff-grpc-kotlin
+   ```
 
-## Intellij Notes
+2. To run contract tests, execute
+   ```shell
+   ./gradlew clean test   
+   ```
 
-If you are utilizing **IntelliJ IDEA**, you have the option to compile or install the proto module via the Maven sidebar.<br/>
-Subsequently, you can initiate the Spring server through the Run/Debug menu.
+3. In case you want to run just the gRPC server using Gradle you can execute
+   ```shell
+   ./gradlew bootRun
+   ```
