@@ -6,7 +6,6 @@ import net.devh.boot.grpc.server.advice.GrpcExceptionHandler
 
 @GrpcAdvice
 class GlobalGrpcExceptionHandler {
-
     @GrpcExceptionHandler(Exception::class)
     fun handleException(exception: Exception): Status {
         return Status.INTERNAL.withDescription(exception.message).withCause(exception)

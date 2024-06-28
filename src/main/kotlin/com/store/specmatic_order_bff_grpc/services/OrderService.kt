@@ -11,10 +11,8 @@ import com.store.product.proto.NewProduct as ServiceNewProduct
 import com.store.product.proto.ProductSearchRequest as ServiceProductSearchRequest
 import com.store.product.proto.ProductType as ServiceProductType
 
-
 @Service
 class OrderService {
-
     @GrpcClient("order-service")
     lateinit var orderServiceGrpc: OrderServiceGrpc.OrderServiceBlockingStub
 
@@ -23,9 +21,8 @@ class OrderService {
 
     fun createOrder(newOrder: NewOrder): OrderId {
         val orderId = orderServiceGrpc.addOrder(
-            ServiceNewOrder.newBuilder().setProductId(newOrder.productId).setCount(newOrder.count).setStatus(
-                ServiceOrderStatus.PENDING
-            ).build()
+            ServiceNewOrder.newBuilder().setProductId(newOrder.productId).setCount(newOrder.count)
+                .setStatus(ServiceOrderStatus.PENDING).build()
         )
         return OrderId.newBuilder().setId(orderId.id).build()
     }
@@ -40,7 +37,6 @@ class OrderService {
                 ProductType.forNumber(it.typeValue)
             ).build()
         }
-
         return ProductListResponse.newBuilder().addAllProducts(products).build()
     }
 
