@@ -1,5 +1,8 @@
 package com.store.specmatic_order_bff_grpc.services
 
+import build.buf.protovalidate.Validator
+import build.buf.protovalidate.exceptions.ValidationException
+import com.google.protobuf.GeneratedMessageV3
 import com.store.bff.proto.*
 import com.store.order.proto.OrderServiceGrpc
 import com.store.product.proto.ProductServiceGrpc
@@ -13,13 +16,24 @@ import com.store.product.proto.ProductType as ServiceProductType
 
 @Service
 class OrderService {
+
+    private final val validator = Validator()
+
     @GrpcClient("order-service")
     lateinit var orderServiceGrpc: OrderServiceGrpc.OrderServiceBlockingStub
 
     @GrpcClient("order-service")
     lateinit var productServiceGrpc: ProductServiceGrpc.ProductServiceBlockingStub
 
+    private fun validateOrThrow(request: GeneratedMessageV3?) {
+        val result = validator.validate(request)
+        if (result.violations.isNotEmpty()) {
+            throw ValidationException(result.toString())
+        }
+    }
+
     fun createOrder(newOrder: NewOrder): OrderId {
+        validateOrThrow(newOrder)
         val orderId = orderServiceGrpc.addOrder(
             ServiceNewOrder.newBuilder().setProductId(newOrder.productId).setCount(newOrder.count)
                 .setStatus(ServiceOrderStatus.PENDING).build()
@@ -28,6 +42,7 @@ class OrderService {
     }
 
     fun findProducts(findAvailableProductsRequest: findAvailableProductsRequest): ProductListResponse {
+        validateOrThrow(findAvailableProductsRequest)
         val products = productServiceGrpc.searchProducts(
             ServiceProductSearchRequest.newBuilder().setType(
                 ServiceProductType.forNumber(findAvailableProductsRequest.typeValue)
@@ -41,6 +56,7 @@ class OrderService {
     }
 
     fun createProduct(newProduct: NewProduct): ProductId {
+        validateOrThrow(newProduct)
         val productId = productServiceGrpc.addProduct(
             ServiceNewProduct.newBuilder().setName(newProduct.name).setType(
                 ServiceProductType.forNumber(newProduct.typeValue)
