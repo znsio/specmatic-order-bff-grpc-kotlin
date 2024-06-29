@@ -3,7 +3,6 @@ package com.store.specmatic_order_bff_grpc.handlers
 import io.grpc.Status
 import net.devh.boot.grpc.server.advice.GrpcAdvice
 import net.devh.boot.grpc.server.advice.GrpcExceptionHandler
-import build.buf.protovalidate.exceptions.ValidationException
 
 @GrpcAdvice
 class GlobalGrpcExceptionHandler {

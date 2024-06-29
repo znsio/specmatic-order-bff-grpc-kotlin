@@ -5,7 +5,6 @@ option java_package = "com.store.bff.proto";
 option java_outer_classname = "BffProto";
 
 package com.store.bff;
-import "buf/validate/validate.proto";
 
 service OrderBffService {
   rpc findAvailableProducts(findAvailableProductsRequest) returns (ProductListResponse);
@@ -22,15 +21,15 @@ enum ProductType {
 }
 
 message findAvailableProductsRequest {
-  ProductType type = 1 [(buf.validate.field).enum.defined_only = true];
-  int32  pageSize = 2 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1];
+  ProductType type = 1;
+  int32  pageSize = 2;
 }
 
 message Product {
-  int32 id = 1 [(buf.validate.field).required = true];
-  string name = 2 [(buf.validate.field).required = true];
-  ProductType type = 3 [(buf.validate.field).required = true];
-  int32 inventory = 4 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1, (buf.validate.field).int32.lte = 101];
+  int32 id = 1;
+  string name = 2;
+  ProductType type = 3;
+  int32 inventory = 4;
 }
 
 message ProductListResponse {
@@ -38,20 +37,20 @@ message ProductListResponse {
 }
 
 message NewOrder {
-  int32 productId = 1 [(buf.validate.field).required = true];
-  int32 count = 2 [(buf.validate.field).required = true];
+  int32 productId = 1;
+  int32 count = 2;
 }
 
 message OrderId {
-  int32 id = 1 [(buf.validate.field).required = true];
+  int32 id = 1;
 }
 
 message NewProduct {
-  string name = 1 [(buf.validate.field).required = true];
-  ProductType type = 2 [(buf.validate.field).required = true];
-  int32 inventory = 3 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1, (buf.validate.field).int32.lte = 101];
+  string name = 1;
+  ProductType type = 2;
+  int32 inventory = 3;
 }
 
 message ProductId {
-  int32 id = 1 [(buf.validate.field).required = true];
+  int32 id = 1;
 }
