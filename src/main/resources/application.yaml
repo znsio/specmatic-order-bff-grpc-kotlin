@@ -3,7 +3,7 @@ spring:
     name: specmatic-order-bff-grpc
 grpc:
   client:
-    order-service:
+    domain-api-service:
       address: "static://localhost:9090"
       negotiationType: plaintext
   server:

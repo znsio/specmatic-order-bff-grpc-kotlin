@@ -12,11 +12,11 @@ import com.store.product.proto.ProductSearchRequest as ServiceProductSearchReque
 import com.store.product.proto.ProductType as ServiceProductType
 
 @Service
-class OrderService {
-    @GrpcClient("order-service")
+class DomainAPIService {
+    @GrpcClient("domain-api-service")
     lateinit var orderServiceGrpc: OrderServiceGrpc.OrderServiceBlockingStub
 
-    @GrpcClient("order-service")
+    @GrpcClient("domain-api-service")
     lateinit var productServiceGrpc: ProductServiceGrpc.ProductServiceBlockingStub
 
     fun createOrder(newOrder: NewOrder): OrderId {
