@@ -1,5 +1,5 @@
 {
-  "fullMethodName": "com.store.bff.OrderBffService/createOrder",
+  "fullMethodName": "com.store.order.bff.OrderService/createOrder",
   "request": {
     "count": 5
   },

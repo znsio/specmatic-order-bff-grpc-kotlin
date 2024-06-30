@@ -1,5 +1,5 @@
 {
-  "fullMethodName": "com.store.bff.OrderBffService/createProduct",
+  "fullMethodName": "com.store.order.bff.OrderService/createProduct",
   "request": {
     "name": "Some Book",
     "type": "BOOK"

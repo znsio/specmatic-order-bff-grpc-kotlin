@@ -1,15 +1,15 @@
-package com.store.specmatic_order_bff_grpc.controllers
+package com.store.order.bff.controllers
 
 import build.buf.protovalidate.Validator
 import build.buf.protovalidate.exceptions.ValidationException
 import com.google.protobuf.GeneratedMessageV3
-import com.store.bff.proto.*
-import com.store.specmatic_order_bff_grpc.services.DomainAPIService
+import com.store.order.bff.proto.*
+import com.store.order.bff.services.DomainAPIService
 import io.grpc.stub.StreamObserver
 import net.devh.boot.grpc.server.service.GrpcService
 
 @GrpcService
-class OrderService(private val domainAPIService: DomainAPIService) : OrderBffServiceGrpc.OrderBffServiceImplBase() {
+class OrderService(private val domainAPIService: DomainAPIService) : OrderServiceGrpc.OrderServiceImplBase() {
     private final val validator = Validator()
 
     private fun validateAndThrowOnFailure(request: GeneratedMessageV3?) {

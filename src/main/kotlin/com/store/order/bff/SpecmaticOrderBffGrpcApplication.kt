@@ -1,4 +1,4 @@
-package com.store.specmatic_order_bff_grpc
+package com.store.order.bff
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

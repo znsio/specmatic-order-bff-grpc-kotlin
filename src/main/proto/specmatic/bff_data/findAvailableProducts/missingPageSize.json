@@ -1,5 +1,5 @@
 {
-  "fullMethodName": "com.store.bff.OrderBffService/findAvailableProducts",
+  "fullMethodName": "com.store.order.bff.OrderService/findAvailableProducts",
   "request": {
     "type": "BOOK"
   },

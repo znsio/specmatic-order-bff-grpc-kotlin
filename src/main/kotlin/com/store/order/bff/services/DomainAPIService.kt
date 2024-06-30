@@ -1,6 +1,6 @@
-package com.store.specmatic_order_bff_grpc.services
+package com.store.order.bff.services
 
-import com.store.bff.proto.*
+import com.store.order.bff.proto.*
 import com.store.order.proto.OrderServiceGrpc
 import com.store.product.proto.ProductServiceGrpc
 import net.devh.boot.grpc.client.inject.GrpcClient

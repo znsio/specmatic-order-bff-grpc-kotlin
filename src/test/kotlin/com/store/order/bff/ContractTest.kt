@@ -1,4 +1,4 @@
-package com.store.specmatic_order_bff_grpc
+package com.store.order.bff
 
 import `in`.specmatic.grpc.junit.SpecmaticGrpcContractTest
 import `in`.specmatic.grpc.stub.GrpcStub

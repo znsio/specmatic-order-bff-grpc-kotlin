@@ -1,4 +1,4 @@
-package com.store.specmatic_order_bff_grpc.handlers
+package com.store.order.bff.handlers
 
 import io.grpc.Status
 import net.devh.boot.grpc.server.advice.GrpcAdvice
