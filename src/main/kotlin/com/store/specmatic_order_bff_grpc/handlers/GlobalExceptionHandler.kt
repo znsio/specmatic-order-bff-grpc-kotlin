@@ -10,4 +10,9 @@ class GlobalGrpcExceptionHandler {
     fun handleException(exception: Exception): Status {
         return Status.INTERNAL.withDescription(exception.message).withCause(exception)
     }
+
+    @GrpcExceptionHandler(ValidationException::class)
+    fun handleValidationException(exception: ValidationException): Status {
+        return Status.INVALID_ARGUMENT.withDescription(exception.message).withCause(exception)
+    }
 }
