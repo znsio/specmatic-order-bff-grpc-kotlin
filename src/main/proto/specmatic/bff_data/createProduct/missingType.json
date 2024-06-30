@@ -1,0 +1,11 @@
+{
+  "fullMethodName": "com.store.bff.OrderBffService/createProduct",
+  "request": {
+    "name": "Some Book",
+    "inventory": 10
+  },
+  "response": {
+    "errorCode": 3,
+    "errorMessage": "Validation error:\n - type: value is required [required]"
+  }
+}

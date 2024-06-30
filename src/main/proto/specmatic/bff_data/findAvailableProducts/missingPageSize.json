@@ -1,0 +1,10 @@
+{
+  "fullMethodName": "com.store.bff.OrderBffService/findAvailableProducts",
+  "request": {
+    "type": "BOOK"
+  },
+  "response": {
+    "errorCode": 3,
+    "errorMessage": "Validation error:\n - pageSize: value is required [required]"
+  }
+}

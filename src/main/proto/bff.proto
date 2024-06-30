@@ -23,14 +23,14 @@ enum ProductType {
 
 message findAvailableProductsRequest {
   ProductType type = 1 [(buf.validate.field).enum.defined_only = true];
-  int32  pageSize = 2 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1];
+  int32  pageSize = 2 [(buf.validate.field).required = true];
 }
 
 message Product {
   int32 id = 1 [(buf.validate.field).required = true];
   string name = 2 [(buf.validate.field).required = true];
   ProductType type = 3 [(buf.validate.field).required = true];
-  int32 inventory = 4 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1, (buf.validate.field).int32.lte = 100];
+  int32 inventory = 4 [(buf.validate.field).required = true];
 }
 
 message ProductListResponse {
@@ -49,7 +49,7 @@ message OrderId {
 message NewProduct {
   string name = 1 [(buf.validate.field).required = true];
   ProductType type = 2 [(buf.validate.field).required = true];
-  int32 inventory = 3 [(buf.validate.field).required = true, (buf.validate.field).int32.gte = 1, (buf.validate.field).int32.lte = 100];
+  int32 inventory = 3 [(buf.validate.field).required = true];
 }
 
 message ProductId {

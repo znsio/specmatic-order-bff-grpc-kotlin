@@ -1,0 +1,10 @@
+{
+  "fullMethodName": "com.store.bff.OrderBffService/createOrder",
+  "request": {
+    "count": 5
+  },
+  "response": {
+    "errorCode": 3,
+    "errorMessage": "Validation error:\n - productId: value is required [required]"
+  }
+}
