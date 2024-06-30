@@ -107,3 +107,21 @@ idea {
         generatedSourceDirs += file("src/generated/main/grpc")
     }
 }
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+        exceptionFormat = 'full'
+    }
+
+    afterSuite { desc, result ->
+        if (!desc.parent) {
+            println "-----------------------------------------------------"
+            println "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
+            println "-----------------------------------------------------"
+        }
+    }
+}
