@@ -38,11 +38,11 @@
         {
           "name": "specmatic-grpc-0.0.1-TRIAL.jar",
           "url": "specmatic-grpc-0.0.1-TRIAL.jar",
-          "size": 118136,
-          "sha512": "9aff573c69ef0a28cc1923aa595cda2474a477a6d1896bbea2209d6fe9a557e8b599bd527ba97e20845d9ecd8076166494ce5480fcc9142a2ccc8498d733389b",
-          "sha256": "442d27defc4e1585215f151fbf4eb4fc32f12dfc92a58abe938fedf349e2f6dd",
-          "sha1": "e29abdb169e6fd2428461ba29dcaa41dcceda7aa",
-          "md5": "40de20ce1585b9a37c24b8cff5c8fa1a"
+          "size": 118237,
+          "sha512": "ff967abda9e0a0e7dcc344c99a74adf160eef778b4163025ca6faf12fe86c36e81c7cde32bf4f9eba5074b3c1e5dc10890e816c89dc33f320e900abad9705739",
+          "sha256": "f14f49cfdb8c41b53b1896c43d2000038f7f209ed51b34861e6d98f4d510b209",
+          "sha1": "e16d20aab546884b2a213fa26122730c17261e00",
+          "md5": "59c0c10bb8cc4b25bfdd33d90734e873"
         }
       ]
     },
@@ -174,11 +174,11 @@
         {
           "name": "specmatic-grpc-0.0.1-TRIAL.jar",
           "url": "specmatic-grpc-0.0.1-TRIAL.jar",
-          "size": 118136,
-          "sha512": "9aff573c69ef0a28cc1923aa595cda2474a477a6d1896bbea2209d6fe9a557e8b599bd527ba97e20845d9ecd8076166494ce5480fcc9142a2ccc8498d733389b",
-          "sha256": "442d27defc4e1585215f151fbf4eb4fc32f12dfc92a58abe938fedf349e2f6dd",
-          "sha1": "e29abdb169e6fd2428461ba29dcaa41dcceda7aa",
-          "md5": "40de20ce1585b9a37c24b8cff5c8fa1a"
+          "size": 118237,
+          "sha512": "ff967abda9e0a0e7dcc344c99a74adf160eef778b4163025ca6faf12fe86c36e81c7cde32bf4f9eba5074b3c1e5dc10890e816c89dc33f320e900abad9705739",
+          "sha256": "f14f49cfdb8c41b53b1896c43d2000038f7f209ed51b34861e6d98f4d510b209",
+          "sha1": "e16d20aab546884b2a213fa26122730c17261e00",
+          "md5": "59c0c10bb8cc4b25bfdd33d90734e873"
         }
       ]
     },
@@ -194,11 +194,11 @@
         {
           "name": "specmatic-grpc-0.0.1-TRIAL-all.jar",
           "url": "specmatic-grpc-0.0.1-TRIAL-all.jar",
-          "size": 81116721,
-          "sha512": "b5f6fd000ab0455da122cbf859bb9ae4d19e3e55db6c2a8fcbd758a1e3ccf80d29d5291ea523c573d8a006ba58d888e62aeed1ad7936ffe35aef75e383b4bb24",
-          "sha256": "4b70a56baee23a798f553d2b2423c4734921c998fc5f723d56b973ef0a33bdbc",
-          "sha1": "66943ceabcc9f743f17fd723a55e967288b5fff3",
-          "md5": "ef3da946ee9978c11a048f6f74efaab5"
+          "size": 80952115,
+          "sha512": "bfcf4b039a5431b58935909095758316be002169f0fe90e2bf5a27ef6fabb522577c7395130425fa47559dc2939fd721a464e0e73196da2182037b85551dc7bd",
+          "sha256": "eb52bd6c500b00303fab0baf7194e2649e1acdbcc27c830a483ae0420298b19c",
+          "sha1": "c7bb565f22a7ff6a561c053ff8aca09a76178d32",
+          "md5": "ac044f2da5ec1b6f366f0dd66de1ef44"
         }
       ]
     }
