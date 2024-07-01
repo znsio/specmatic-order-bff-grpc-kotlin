@@ -38,11 +38,11 @@
         {
           "name": "specmatic-grpc-0.0.1-TRIAL.jar",
           "url": "specmatic-grpc-0.0.1-TRIAL.jar",
-          "size": 106801,
-          "sha512": "52e5c44474c2ac41c756c2e4acb4698150801e3bfb789e7d9aa774a8fd80c093da5b7cdebae1471316456ea36e5fa3829e9c8ff623dcbe04aeb7491362ed0f07",
-          "sha256": "46d249316f89118b81928231b565cbb625c57575d6fc85341a033aeac5bbb488",
-          "sha1": "b57c66e638bc8fcd3e002c90fd6b3c7f9169bc25",
-          "md5": "7c9611b3d153bda64385cbde6843b7d1"
+          "size": 118136,
+          "sha512": "9aff573c69ef0a28cc1923aa595cda2474a477a6d1896bbea2209d6fe9a557e8b599bd527ba97e20845d9ecd8076166494ce5480fcc9142a2ccc8498d733389b",
+          "sha256": "442d27defc4e1585215f151fbf4eb4fc32f12dfc92a58abe938fedf349e2f6dd",
+          "sha1": "e29abdb169e6fd2428461ba29dcaa41dcceda7aa",
+          "md5": "40de20ce1585b9a37c24b8cff5c8fa1a"
         }
       ]
     },
@@ -62,7 +62,7 @@
           "group": "in.specmatic",
           "module": "junit5-support",
           "version": {
-            "requires": "1.3.29"
+            "requires": "1.3.32"
           }
         },
         {
@@ -156,6 +156,13 @@
           }
         },
         {
+          "group": "build.buf",
+          "module": "protovalidate",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
           "group": "org.jetbrains.kotlin",
           "module": "kotlin-stdlib",
           "version": {
@@ -167,11 +174,11 @@
         {
           "name": "specmatic-grpc-0.0.1-TRIAL.jar",
           "url": "specmatic-grpc-0.0.1-TRIAL.jar",
-          "size": 106801,
-          "sha512": "52e5c44474c2ac41c756c2e4acb4698150801e3bfb789e7d9aa774a8fd80c093da5b7cdebae1471316456ea36e5fa3829e9c8ff623dcbe04aeb7491362ed0f07",
-          "sha256": "46d249316f89118b81928231b565cbb625c57575d6fc85341a033aeac5bbb488",
-          "sha1": "b57c66e638bc8fcd3e002c90fd6b3c7f9169bc25",
-          "md5": "7c9611b3d153bda64385cbde6843b7d1"
+          "size": 118136,
+          "sha512": "9aff573c69ef0a28cc1923aa595cda2474a477a6d1896bbea2209d6fe9a557e8b599bd527ba97e20845d9ecd8076166494ce5480fcc9142a2ccc8498d733389b",
+          "sha256": "442d27defc4e1585215f151fbf4eb4fc32f12dfc92a58abe938fedf349e2f6dd",
+          "sha1": "e29abdb169e6fd2428461ba29dcaa41dcceda7aa",
+          "md5": "40de20ce1585b9a37c24b8cff5c8fa1a"
         }
       ]
     },
@@ -187,11 +194,11 @@
         {
           "name": "specmatic-grpc-0.0.1-TRIAL-all.jar",
           "url": "specmatic-grpc-0.0.1-TRIAL-all.jar",
-          "size": 77316775,
-          "sha512": "5f9febf6f0946254296f0a68f02104b369ccb888ab91e03138e80397f7ebb3d5efaf93716a6a548d6083063a859739f765628319ba1a62905fa1849ef0c2c1b2",
-          "sha256": "969c4f576699029925cc25c336f09189ff369204f5b8aad773112f6cb5040c87",
-          "sha1": "e055c1ebeb0136d145b69c8a4f07ad6284c80968",
-          "md5": "49ddc8b09d462483cc716d9f47e00926"
+          "size": 81116721,
+          "sha512": "b5f6fd000ab0455da122cbf859bb9ae4d19e3e55db6c2a8fcbd758a1e3ccf80d29d5291ea523c573d8a006ba58d888e62aeed1ad7936ffe35aef75e383b4bb24",
+          "sha256": "4b70a56baee23a798f553d2b2423c4734921c998fc5f723d56b973ef0a33bdbc",
+          "sha1": "66943ceabcc9f743f17fd723a55e967288b5fff3",
+          "md5": "ef3da946ee9978c11a048f6f74efaab5"
         }
       ]
     }

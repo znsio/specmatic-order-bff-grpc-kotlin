@@ -1,8 +1,0 @@
-{
-  "fullMethodName": "com.store.order.bff.OrderService/findAvailableProducts",
-  "request": {},
-  "response": {
-    "errorCode": 3,
-    "errorMessage": "Validation error:\n - pageSize: value is required [required]"
-  }
-}

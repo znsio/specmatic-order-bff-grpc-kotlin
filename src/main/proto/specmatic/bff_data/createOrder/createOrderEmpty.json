@@ -1,8 +1,0 @@
-{
-  "fullMethodName": "com.store.order.bff.OrderService/createOrder",
-  "request": {},
-  "response": {
-    "errorCode": 3,
-    "errorMessage": "Validation error:\n - productId: value is required [required]\n - count: value is required [required]"
-  }
-}
