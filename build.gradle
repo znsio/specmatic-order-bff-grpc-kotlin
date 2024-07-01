@@ -35,7 +35,6 @@ java {
 
 repositories {
     mavenCentral()
-    mavenLocal()
     maven {
         url uri('lib')
     }
