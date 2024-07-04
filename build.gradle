@@ -56,6 +56,15 @@ dependencies {
     testImplementation 'in.specmatic:specmatic-grpc:0.0.1-TRIAL'
 }
 
+sourceSets {
+    main {
+        proto {
+            srcDir  'specmatic-order-contracts/in/specmatic/examples/store/order_api_grpc'
+            srcDir  'specmatic-order-contracts/in/specmatic/examples/store/order_bff_grpc'
+        }
+    }
+}
+
 protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:${protobufVersion}"
