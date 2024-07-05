@@ -20,22 +20,31 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
 
 ## Project Setup
 
-1. Fork or clone the repository
+1. Clone the repository
    ```shell
    git clone https://github.com/znsio/specmatic-order-bff-grpc-kotlin
    ```
    
-2. Initialize and update the contract-repo submodule
+2. Initialize and update the `specmatic-order-contracts` submodule
+
    ```shell
    git submodule update --init --recursive --remote
    ```
-   
-3. To run contract tests, execute
+
+3. Enable automatic submodule updating when executing `git pull`
+
+   ```shell
+   git config submodule.recurse true
+   ```
+
+4. To run contract tests, execute
+
    ```shell
    ./gradlew clean test   
    ```
 
-4. If you intend to only run the gRPC server using Gradle, you can execute
+5. In case you want to run just the gRPC server using Gradle you can execute
+
    ```shell
    ./gradlew bootRun
    ```
