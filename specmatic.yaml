@@ -1,7 +1,6 @@
 sources:
   - provider: git
     repository: https://github.com/znsio/specmatic-order-contracts
-    branch: grpc-contracts
     test:
       - in/specmatic/examples/store/order_bff_grpc/bff.proto
     stub:

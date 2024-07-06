@@ -1,4 +1,3 @@
 [submodule "specmatic-order-contracts"]
 	path = specmatic-order-contracts
 	url = https://github.com/znsio/specmatic-order-contracts
-	branch = grpc-contracts
