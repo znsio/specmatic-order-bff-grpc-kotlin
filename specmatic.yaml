@@ -1,8 +1,9 @@
 sources:
-  - provider: filesystem
+  - provider: git
+    repository: https://github.com/znsio/specmatic-order-contracts
     test:
-      - src/main/proto/bff.proto
+      - in/specmatic/examples/store/order_bff_grpc/bff.proto
     stub:
-      - src/main/proto/order.proto
-      - src/main/proto/product.proto
+      - in/specmatic/examples/store/order_api_grpc/order.proto
+      - in/specmatic/examples/store/order_api_grpc/product.proto
 

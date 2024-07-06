@@ -1,18 +1,16 @@
 # Specmatic Order BFF gRPC Sample
 
-This sample project demonstrates [Specmatic](https://specmatic.in/) **gRPC support** which allows you to use your **proto files for Contract Testing and Intelligent Service Virtualisation (stubbing/mocking)**.
-[Specmatic](https://specmatic.in/) **gRPC support** can also help you use your proto files for #nocode backward compatibility testing and more.
+This sample project demonstrates [Specmatic](https://specmatic.io/) **gRPC support** which allows you to use your **proto files for Contract Testing and Intelligent Service Virtualisation (stubbing/mocking)**.
+[Specmatic](https://specmatic.io/) **gRPC support** can also help you use your proto files for #nocode backward compatibility testing and more.
 
 ![Specmatic gRPC Sample Project Architecture](assets/SpecmaticGRPCSupport.gif)
 
-The **specmatic-order-bff-grpc-kotlin** is a gRPC server application built as per below proto file:
-* [`src/main/proto/bff.proto`](src/main/proto/bff.proto)
+The **specmatic-order-bff-grpc-kotlin** is a gRPC server application developed according to the following proto file, which can be found in the central contract repository:
+* [bff.proto](https://github.com/znsio/specmatic-order-contracts/blob/grpc-contracts/in/specmatic/examples/store/order_bff_grpc/bff.proto)
 
-This BFF project depends on the [OrderAPI domain service](https://github.com/znsio/specmatic-order-api-grpc-kotlin) which implements the following proto files:
-* [`src/main/proto/order.proto`](src/main/proto/order.proto)
-* [`src/main/proto/product.proto`](src/main/proto/product.proto)
-
-NOTE: In a real-world scenario, these proto files would be on a Central Contract Repo so that we have single source of truth for all stakeholders. We have the files locally here for demo purposes.
+This BFF project relies on the [OrderAPI domain service](https://github.com/znsio/specmatic-order-api-grpc-kotlin) which implements the following proto files:
+* [order.proto](https://github.com/znsio/specmatic-order-contracts/blob/grpc-contracts/in/specmatic/examples/store/order_api_grpc/order.proto)
+* [product.proto](https://github.com/znsio/specmatic-order-contracts/blob/grpc-contracts/in/specmatic/examples/store/order_api_grpc/product.proto)
 
 The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-order-bff-grpc-kotlin** gRPC server app using the above proto files.
 
@@ -22,17 +20,31 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
 
 ## Project Setup
 
-1. Fork or clone the repository
+1. Clone the repository
    ```shell
    git clone https://github.com/znsio/specmatic-order-bff-grpc-kotlin
    ```
+   
+2. Initialize and update the `specmatic-order-contracts` submodule
 
-2. To run contract tests, execute
+   ```shell
+   git submodule update --init --recursive --remote
+   ```
+
+3. Enable automatic submodule updating when executing `git pull`
+
+   ```shell
+   git config submodule.recurse true
+   ```
+
+4. To run contract tests, execute
+
    ```shell
    ./gradlew clean test   
    ```
 
-3. In case you want to run just the gRPC server using Gradle you can execute
+5. In case you want to run just the gRPC server using Gradle you can execute
+
    ```shell
    ./gradlew bootRun
    ```
