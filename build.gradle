@@ -59,8 +59,7 @@ dependencies {
 sourceSets {
     main {
         proto {
-            srcDir  'specmatic-order-contracts/in/specmatic/examples/store/order_api_grpc'
-            srcDir  'specmatic-order-contracts/in/specmatic/examples/store/order_bff_grpc'
+            srcDir  'specmatic-order-contracts/io/specmatic/examples/store/grpc'
         }
     }
 }
