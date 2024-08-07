@@ -11,7 +11,7 @@
   <version>0.0.4-TRIAL</version>
   <name>Specmatic GRPC</name>
   <description>Specmatic support for GRPC</description>
-  <url>https://specmatic.in</url>
+  <url>https://specmatic.io</url>
   <developers>
     <developer>
       <id>specmaticBuilders</id>
@@ -21,7 +21,7 @@
   </developers>
   <scm>
     <connection>scm:git:git@github.com:znsio/specmatic.git</connection>
-    <url>https://specmatic.in/</url>
+    <url>https://specmatic.io/</url>
   </scm>
   <dependencyManagement>
     <dependencies>
