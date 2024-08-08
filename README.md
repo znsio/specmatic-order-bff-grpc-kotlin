@@ -37,14 +37,34 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
    git config submodule.recurse true
    ```
 
-4. To run contract tests, execute
+## Running the Application
+
+### Using Gradle
+
+1. To run contract tests, execute:
 
    ```shell
    ./gradlew clean test   
    ```
 
-5. In case you want to run just the gRPC server using Gradle you can execute
+2. To run the gRPC server using Gradle, execute:
 
    ```shell
    ./gradlew bootRun
    ```
+
+### Using Docker
+
+1. Build the Docker image:
+
+   ```shell
+   docker build -t specmatic-order-bff-grpc .
+   ```
+
+2. Run the Docker container:
+
+   ```shell
+   docker run -p 8080:8080 specmatic-order-bff-grpc
+   ```
+
+   This command will start the gRPC server and map port 8080 from the container to port 8080 on your host machine.
