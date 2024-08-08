@@ -14,4 +14,4 @@ RUN chmod +x ./gradlew
 EXPOSE 8080
 
 # Run the application using Gradle
-CMD ["./gradlew", "bootRun"]
+CMD ["./gradlew", "clean", "test"]
