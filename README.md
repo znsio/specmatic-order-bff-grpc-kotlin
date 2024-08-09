@@ -63,7 +63,7 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
 
 2. Build and run the app (BFF) in a Docker container:
 
-```shell
+   ```shell
    docker build -t specmatic-order-bff-grpc .
    ```
 
@@ -71,9 +71,8 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
    docker run -p 8080:8080 specmatic-order-bff-grpc
    ```
 
-
-   3. Finally start the test to communicate to BFF (consumer) :
+3. Finally start the test to communicate to BFF (consumer) :
 
    ```shell
-   docker -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" znsio/specmatic-grpc-trial test --port=8080
+   docker run -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" znsio/specmatic-grpc-trial test --port=8080
    ```
