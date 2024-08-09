@@ -37,14 +37,65 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
    git config submodule.recurse true
    ```
 
-4. To run contract tests, execute
+## Running Contract Tests
+
+### Using Gradle
 
    ```shell
    ./gradlew clean test   
    ```
 
-5. In case you want to run just the gRPC server using Gradle you can execute
+### Using Docker
+
+1. Start the Specmatic gRPC stub server to emulate domain service:
+
+   ```shell
+   docker run -p 9090:9090 -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" znsio/specmatic-grpc-trial stub --port=9090
+   ```
+
+2. Build and run the BFF service (System Under Test) in a Docker container:
+
+   ```shell
+   docker build --no-cache -t specmatic-order-bff-grpc .
+   ```
+
+   ```shell
+   docker run --network host -p 8080:8080 specmatic-order-bff-grpc
+   ```
+
+3. Finally, run Specmatic Contract on the BFF service (System Under Test):
+
+   ```shell
+   docker run --network host -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" znsio/specmatic-grpc-trial test --port=8080
+   ```
+
+## Developer notes
+
+The BFF service can be independently started with below command.
 
    ```shell
    ./gradlew bootRun
    ```
+
+And now you can debug / test by using [grpcurl](https://github.com/fullstorydev/grpcurl) to verify the setup.
+
+   ```shell
+   grpcurl -plaintext -d '{"type": "OTHER", "pageSize": 10}' localhost:8080 com.store.order.bff.OrderService/findAvailableProducts
+   ```
+
+Which should give you results as shown below.
+   ```
+   %  grpcurl -plaintext -d '{"type": "OTHER", "pageSize": 10}' localhost:8080 com.store.order.bff.OrderService/findAvailableProducts
+   {
+     "products": [
+       {
+         "id": 608,
+         "name": "PXDIO",
+         "type": "GADGET",
+         "inventory": 148
+       }
+     ]
+   }
+   ```
+
+Also observe corresponding logs in the Specmatic Stub Server which is emulating domain service to understand the interactions between BFF and Domain and Service.
