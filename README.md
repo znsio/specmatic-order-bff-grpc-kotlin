@@ -55,16 +55,25 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
 
 ### Using Docker
 
-1. Build the Docker image:
+1. Start the gRPC domain service (provider):
 
    ```shell
-   docker build -t specmatic-order-bff-grpc .
+   docker run -p 9090:9090 -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" znsio/specmatic-grpc-trial stub --port=9090
    ```
 
-2. Run the Docker container:
+2. Build and run the app (BFF) in a Docker container:
+
+```shell
+   docker build -t specmatic-order-bff-grpc .
+   ```
 
    ```shell
    docker run -p 8080:8080 specmatic-order-bff-grpc
    ```
 
-   This command will start the gRPC server and map port 8080 from the container to port 8080 on your host machine.
+
+   3. Finally start the test to communicate to BFF (consumer) :
+
+   ```shell
+   docker -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" znsio/specmatic-grpc-trial test --port=8080
+   ```
