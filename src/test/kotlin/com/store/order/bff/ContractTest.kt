@@ -2,6 +2,7 @@ package com.store.order.bff
 
 import io.specmatic.grpc.junit.SpecmaticGrpcContractTest
 import io.specmatic.grpc.stub.GrpcStub
+import io.specmatic.grpc.utils.EXAMPLES_DIR
 import io.specmatic.grpc.utils.HOST
 import io.specmatic.grpc.utils.PORT
 import io.specmatic.grpc.utils.SPECMATIC_GENERATIVE_TESTS
@@ -20,6 +21,7 @@ class ContractTest : SpecmaticGrpcContractTest {
             System.setProperty(HOST, "localhost")
             System.setProperty(PORT, "8080")
             System.setProperty(SPECMATIC_GENERATIVE_TESTS, "true")
+            System.setProperty(EXAMPLES_DIR, "src/test/resources/specmatic")
             grpcStub = GrpcStub.createGrpcStub(9090)
             grpcStub?.start()
         }

@@ -1,0 +1,17 @@
+{
+  "fullMethodName": "com.store.order.bff.OrderService/findAvailableProducts",
+  "request": {
+    "type": "BOOK",
+    "pageSize": 10
+  },
+  "response": {
+    "products": [
+      {
+        "id": 1,
+        "name": "Effective Java",
+        "type": "BOOK",
+        "inventory": 5
+      }
+    ]
+  }
+}
