@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.specmatic</groupId>
   <artifactId>specmatic-grpc</artifactId>
-  <version>0.0.7-TRIAL</version>
+  <version>0.0.8-TRIAL</version>
   <name>Specmatic GRPC</name>
   <description>Specmatic support for GRPC</description>
   <url>https://specmatic.io</url>
@@ -44,13 +44,13 @@
     <dependency>
       <groupId>io.specmatic</groupId>
       <artifactId>specmatic-executable</artifactId>
-      <version>2.0.13</version>
+      <version>2.0.17</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.specmatic</groupId>
       <artifactId>junit5-support</artifactId>
-      <version>2.0.13</version>
+      <version>2.0.17</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
