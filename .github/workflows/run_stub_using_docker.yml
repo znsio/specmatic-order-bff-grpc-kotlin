@@ -1,0 +1,25 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Print the config file
+      run: cat $(pwd)/specmatic.yaml
+    
+    - name: Run the stub
+      run: |
+        docker run -p 9090:9090 \
+        -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" \
+        znsio/specmatic-grpc-trial virtualize --port=9090   
