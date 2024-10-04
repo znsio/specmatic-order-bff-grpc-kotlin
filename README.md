@@ -60,7 +60,7 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
    ```
 
    ```shell
-   docker run --network host -p 8080:8080 specmatic-order-bff-grpc
+   docker run --network host -p 8085:8085 specmatic-order-bff-grpc
    ```
 
    Or run it using `./gradlew bootRun`
@@ -68,7 +68,7 @@ The `ContractTest` class demonstrates how to use Specmatic to test **specmatic-o
 3. Finally, run Specmatic Contract on the BFF service (System Under Test):
 
    ```shell
-   docker run --network host -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" -v "$(pwd)/build/reports/specmatic:/usr/src/app/build/reports/specmatic" -e SPECMATIC_GENERATIVE_TESTS=true znsio/specmatic-grpc-trial test --port=8080 --host=host.docker.internal
+   docker run --network host -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" -v "$(pwd)/build/reports/specmatic:/usr/src/app/build/reports/specmatic" -e SPECMATIC_GENERATIVE_TESTS=true znsio/specmatic-grpc-trial test --port=8085 --host=host.docker.internal
    ```
 
 ## Developer notes
@@ -82,12 +82,12 @@ The BFF service can be independently started with below command.
 And now you can debug / test by using [grpcurl](https://github.com/fullstorydev/grpcurl) to verify the setup.
 
    ```shell
-   grpcurl -plaintext -d '{"type": "OTHER", "pageSize": 10}' localhost:8080 com.store.order.bff.OrderService/findAvailableProducts
+   grpcurl -plaintext -d '{"type": "OTHER", "pageSize": 10}' localhost:8085 com.store.order.bff.OrderService/findAvailableProducts
    ```
 
 Which should give you results as shown below.
    ```
-   %  grpcurl -plaintext -d '{"type": "OTHER", "pageSize": 10}' localhost:8080 com.store.order.bff.OrderService/findAvailableProducts
+   %  grpcurl -plaintext -d '{"type": "OTHER", "pageSize": 10}' localhost:8085 com.store.order.bff.OrderService/findAvailableProducts
    {
      "products": [
        {
@@ -98,6 +98,12 @@ Which should give you results as shown below.
        }
      ]
    }
+   ```
+
+Alternatively you can also use [grpcui](https://github.com/fullstorydev/grpcui) to debug the service.
+
+   ```shell
+   grpcui -plaintext localhost:8085
    ```
 
 Also observe corresponding logs in the Specmatic Stub Server which is emulating domain service to understand the interactions between BFF and Domain and Service.
