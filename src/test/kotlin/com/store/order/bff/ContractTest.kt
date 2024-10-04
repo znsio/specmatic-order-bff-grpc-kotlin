@@ -18,7 +18,7 @@ class ContractTest : SpecmaticGrpcContractTest {
         @BeforeAll
         fun setup() {
             System.setProperty(HOST, "localhost")
-            System.setProperty(PORT, "8080")
+            System.setProperty(PORT, "8085")
             System.setProperty(SPECMATIC_GENERATIVE_TESTS, "true")
             grpcStub = GrpcStub.createGrpcStub(9090)
             grpcStub?.start()
