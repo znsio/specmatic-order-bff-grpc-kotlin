@@ -3,7 +3,7 @@
   "component": {
     "group": "io.specmatic",
     "module": "specmatic-grpc",
-    "version": "0.0.8-TRIAL",
+    "version": "0.0.12-TRIAL",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -36,13 +36,13 @@
       ],
       "files": [
         {
-          "name": "specmatic-grpc-0.0.8-TRIAL.jar",
-          "url": "specmatic-grpc-0.0.8-TRIAL.jar",
-          "size": 188462,
-          "sha512": "81861bea24458c347dd09d4360dc0f01e896b06ebaaf35ac5fd10dd1da63b96731d6d5783933db6e7ec92cf25395f6d0975e80215672314309b884f6087e47b7",
-          "sha256": "55cb4d063703e480b6d7db9b5321a317bffa2dfa9c39c0f30884d195fd7112c2",
-          "sha1": "b8bb28b305f2a3d77c36cc0222cc714e383448f3",
-          "md5": "30b5aed78e754767e61deff2194611a6"
+          "name": "specmatic-grpc-0.0.12-TRIAL.jar",
+          "url": "specmatic-grpc-0.0.12-TRIAL.jar",
+          "size": 189624,
+          "sha512": "55e22bf8d347d13b08314825283eec2e8336f603d4d3458e13d3f1c64639f5e5475d221b36f3b7e283eb27e6c61eb52e550aeb808071187d3e8e83b43367c29e",
+          "sha256": "6d101ad981405cc32af8ad87dccb7c68c46da10e122585d374755fbf86df5ba0",
+          "sha1": "6945432604dc621cf1f60f917dc172f6525eedfa",
+          "md5": "c592c63f6cf2ede0efaecd994d90dd1a"
         }
       ]
     },
@@ -193,13 +193,13 @@
       ],
       "files": [
         {
-          "name": "specmatic-grpc-0.0.8-TRIAL.jar",
-          "url": "specmatic-grpc-0.0.8-TRIAL.jar",
-          "size": 188462,
-          "sha512": "81861bea24458c347dd09d4360dc0f01e896b06ebaaf35ac5fd10dd1da63b96731d6d5783933db6e7ec92cf25395f6d0975e80215672314309b884f6087e47b7",
-          "sha256": "55cb4d063703e480b6d7db9b5321a317bffa2dfa9c39c0f30884d195fd7112c2",
-          "sha1": "b8bb28b305f2a3d77c36cc0222cc714e383448f3",
-          "md5": "30b5aed78e754767e61deff2194611a6"
+          "name": "specmatic-grpc-0.0.12-TRIAL.jar",
+          "url": "specmatic-grpc-0.0.12-TRIAL.jar",
+          "size": 189624,
+          "sha512": "55e22bf8d347d13b08314825283eec2e8336f603d4d3458e13d3f1c64639f5e5475d221b36f3b7e283eb27e6c61eb52e550aeb808071187d3e8e83b43367c29e",
+          "sha256": "6d101ad981405cc32af8ad87dccb7c68c46da10e122585d374755fbf86df5ba0",
+          "sha1": "6945432604dc621cf1f60f917dc172f6525eedfa",
+          "md5": "c592c63f6cf2ede0efaecd994d90dd1a"
         }
       ]
     },
@@ -213,13 +213,13 @@
       },
       "files": [
         {
-          "name": "specmatic-grpc-0.0.8-TRIAL-all.jar",
-          "url": "specmatic-grpc-0.0.8-TRIAL-all.jar",
-          "size": 99707247,
-          "sha512": "e203ad58b86d817db62be97ecb0598c17172b0ca7c1fd8ff035ac19444ae85caa7bb6c178b91585382ea146d9989160901a11a39a9101c583309b3b9b06dc60a",
-          "sha256": "1cc19078f3db8c0eba15936ddd227c829014082e57c475177e3ca446054287bc",
-          "sha1": "de89d7d676f1b23fdffade96f90626ba6f4ce4f6",
-          "md5": "9b783110b22c470fee09f8540178a40a"
+          "name": "specmatic-grpc-0.0.12-TRIAL-all.jar",
+          "url": "specmatic-grpc-0.0.12-TRIAL-all.jar",
+          "size": 99708409,
+          "sha512": "cb7698ee0c04c4a3cd85fae72d3595c1188b406d26bc8cb2abe8eaeb87ff9d74421f76bdc0c57e82747226ecbe7501aba02219abdd0217c251dd017dc2a59f25",
+          "sha256": "16524a4246f92c7e1d026ed4ae2e4563aa27cee03fa5cd275e1e0bf07c789f2d",
+          "sha1": "294194b44c1c44aea2e254f82e5348d4d1b5ba16",
+          "md5": "2243d1c9ff9b84c165dcc4b750c7a9cd"
         }
       ]
     }
